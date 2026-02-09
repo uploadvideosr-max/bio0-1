@@ -21,14 +21,14 @@ body{
 
 /* HEADER */
 header{
-  padding:30px 20px;
+  padding:35px 20px 20px;
 }
 header h1{
   font-size:38px;
   margin-bottom:10px;
 }
 header p{
-  opacity:.9;
+  opacity:.85;
 }
 
 /* CONTAINER */
@@ -51,26 +51,26 @@ header p{
   transform:translateY(-6px);
 }
 
-/* APP HEADER */
+/* TITLE */
 .app h2{
   margin-top:0;
 }
 .badge{
   display:inline-block;
   margin-left:10px;
-  padding:4px 10px;
+  padding:4px 12px;
   background:#25d366;
   color:#000;
   font-size:12px;
   border-radius:20px;
-  font-weight:600;
+  font-weight:700;
 }
 
 /* DOWNLOAD BUTTON */
 .download{
   display:inline-block;
   margin-top:15px;
-  padding:12px 30px;
+  padding:12px 32px;
   background:#25d366;
   color:#000;
   text-decoration:none;
@@ -88,24 +88,27 @@ header p{
   margin-top:20px;
   background:#111;
   border-radius:14px;
-  padding:15px;
+  padding:18px;
   position:relative;
   font-family:monospace;
 }
 .code-box span{
-  font-size:20px;
-  letter-spacing:2px;
+  font-size:22px;
+  letter-spacing:3px;
 }
+
+/* COPY BUTTON */
 .copy-btn{
   position:absolute;
-  right:12px;
-  top:12px;
+  right:14px;
+  top:14px;
   background:#25d366;
   border:none;
-  padding:6px 12px;
-  border-radius:8px;
+  padding:7px 14px;
+  border-radius:10px;
   cursor:pointer;
-  font-weight:600;
+  font-weight:700;
+  transition:.3s;
 }
 .copy-btn:active{
   transform:scale(.95);
@@ -124,7 +127,7 @@ footer{
 
 <header>
   <h1><i class="fab fa-android"></i> Android aplikacije</h1>
-  <p>Preuzimanje Android aplikacija direktno ili preko Downloader koda</p>
+  <p>Direktno preuzimanje ili Downloader kod</p>
 </header>
 
 <div class="container">
@@ -134,22 +137,20 @@ footer{
     <h2>Balkan Media TV <span class="badge">APK</span></h2>
     <p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
 
-    <!-- DIRECT LINK -->
     <a class="download" href="https://TVOJ-LINK-OVDE.apk" target="_blank">
       <i class="fas fa-download"></i> Direktno preuzimanje
     </a>
 
-    <!-- DOWNLOADER CODE -->
     <div class="code-box">
       <span id="code1">123456</span>
-      <button class="copy-btn" onclick="copyCode('code1')">Kopiraj</button>
+      <button class="copy-btn" onclick="copyCode('code1', this)">Kopiraj</button>
     </div>
   </div>
 
   <!-- APP 2 -->
   <div class="app">
     <h2>IPTV Player <span class="badge">Downloader</span></h2>
-    <p>IPTV aplikacija optimizovana za Android box i telefone.</p>
+    <p>IPTV aplikacija za Android telefone i box uređaje.</p>
 
     <a class="download" href="https://DRUGI-LINK.apk" target="_blank">
       <i class="fas fa-download"></i> Direktno preuzimanje
@@ -157,7 +158,7 @@ footer{
 
     <div class="code-box">
       <span id="code2">987654</span>
-      <button class="copy-btn" onclick="copyCode('code2')">Kopiraj</button>
+      <button class="copy-btn" onclick="copyCode('code2', this)">Kopiraj</button>
     </div>
   </div>
 
@@ -168,10 +169,18 @@ footer{
 </footer>
 
 <script>
-function copyCode(id){
+function copyCode(id, btn){
   const text = document.getElementById(id).innerText;
+
   navigator.clipboard.writeText(text).then(()=>{
-    alert("Downloader kod kopiran: " + text);
+    const original = btn.innerHTML;
+    btn.innerHTML = "✔ Kopirano";
+    btn.style.background = "#1fa855";
+
+    setTimeout(()=>{
+      btn.innerHTML = original;
+      btn.style.background = "#25d366";
+    }, 2000);
   });
 }
 </script>
