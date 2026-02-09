@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balkan Media – Android aplikacije</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+  text-align:center;
+}
+
+/* HEADER */
+header{
+  padding:30px 20px;
+}
+header h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+header p{
+  opacity:.9;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+/* APP CARD */
+.app{
+  background:rgba(255,255,255,0.08);
+  border-radius:22px;
+  padding:30px;
+  margin-bottom:25px;
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+.app:hover{
+  transform:translateY(-6px);
+}
+
+/* APP HEADER */
+.app h2{
+  margin-top:0;
+}
+.badge{
+  display:inline-block;
+  margin-left:10px;
+  padding:4px 10px;
+  background:#25d366;
+  color:#000;
+  font-size:12px;
+  border-radius:20px;
+  font-weight:600;
+}
+
+/* DOWNLOAD BUTTON */
+.download{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 30px;
+  background:#25d366;
+  color:#000;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:700;
+  transition:.3s;
+}
+.download:hover{
+  box-shadow:0 0 20px rgba(37,211,102,.7);
+  transform:scale(1.05);
+}
+
+/* DOWNLOADER CODE */
+.code-box{
+  margin-top:20px;
+  background:#111;
+  border-radius:14px;
+  padding:15px;
+  position:relative;
+  font-family:monospace;
+}
+.code-box span{
+  font-size:20px;
+  letter-spacing:2px;
+}
+.copy-btn{
+  position:absolute;
+  right:12px;
+  top:12px;
+  background:#25d366;
+  border:none;
+  padding:6px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.copy-btn:active{
+  transform:scale(.95);
+}
+
+/* FOOTER */
+footer{
+  margin:40px 0 20px;
+  font-size:14px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1><i class="fab fa-android"></i> Android aplikacije</h1>
+  <p>Preuzimanje Android aplikacija direktno ili preko Downloader koda</p>
+</header>
+
+<div class="container">
+
+  <!-- APP 1 -->
+  <div class="app">
+    <h2>Balkan Media TV <span class="badge">APK</span></h2>
+    <p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
+
+    <!-- DIRECT LINK -->
+    <a class="download" href="https://TVOJ-LINK-OVDE.apk" target="_blank">
+      <i class="fas fa-download"></i> Direktno preuzimanje
+    </a>
+
+    <!-- DOWNLOADER CODE -->
+    <div class="code-box">
+      <span id="code1">123456</span>
+      <button class="copy-btn" onclick="copyCode('code1')">Kopiraj</button>
+    </div>
+  </div>
+
+  <!-- APP 2 -->
+  <div class="app">
+    <h2>IPTV Player <span class="badge">Downloader</span></h2>
+    <p>IPTV aplikacija optimizovana za Android box i telefone.</p>
+
+    <a class="download" href="https://DRUGI-LINK.apk" target="_blank">
+      <i class="fas fa-download"></i> Direktno preuzimanje
+    </a>
+
+    <div class="code-box">
+      <span id="code2">987654</span>
+      <button class="copy-btn" onclick="copyCode('code2')">Kopiraj</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Balkan Media
+</footer>
+
+<script>
+function copyCode(id){
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    alert("Downloader kod kopiran: " + text);
+  });
+}
+</script>
+
+</body>
+</html>
