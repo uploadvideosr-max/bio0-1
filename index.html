@@ -84,6 +84,14 @@ header p{
   100%{transform:translateY(0)}
 }
 
+/* IMAGE FILE NAME */
+.image-name {
+  font-size:14px;
+  color:#bbb;
+  margin-bottom:8px;
+  font-style:italic;
+}
+
 /* TITLE */
 .app h2{
   margin:10px 0;
@@ -158,15 +166,12 @@ footer{
 
   <!-- APP 1 -->
   <div class="app">
-<img src="Balkan Media TV.png" alt="Balkan Media TV" class="app-logo">
-<p class="image-name">Balkan Media TV.png</p> <!-- Naziv slike -->
-<h2>Balkan Media TV</h2>
-<p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
-
+    <img src="images/Balkan Media TV.png" alt="Balkan Media TV" class="app-logo">
+    <h2>Balkan Media TV</h2>
+    <p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
     <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/KqBJaTyO0zJzWFD/download" target="_blank">
       <i class="fas fa-download"></i> Direktno preuzimanje
     </a>
-
     <div class="code-box">
       <span id="code1">123456</span>
       <button class="copy-btn" onclick="copyCode('code1', this)">Kopiraj</button>
@@ -175,14 +180,12 @@ footer{
 
   <!-- APP 2 -->
   <div class="app">
-    <img src="logo-app2.png" alt="IPTV Player" class="app-logo">
+    <img src="images/logo-app2.png" alt="IPTV Player" class="app-logo">
     <h2>IPTV Player</h2>
     <p>IPTV aplikacija za Android telefone i box uređaje.</p>
-
     <a class="download" href="https://DRUGI-LINK.apk" target="_blank">
       <i class="fas fa-download"></i> Direktno preuzimanje
     </a>
-
     <div class="code-box">
       <span id="code2">987654</span>
       <button class="copy-btn" onclick="copyCode('code2', this)">Kopiraj</button>
@@ -196,20 +199,32 @@ footer{
 </footer>
 
 <script>
+// Funkcija za kopiranje koda
 function copyCode(id, btn){
   const text = document.getElementById(id).innerText;
-
   navigator.clipboard.writeText(text).then(()=>{
     const original = btn.innerHTML;
     btn.innerHTML = "✔ Kopirano";
     btn.style.background = "#1fa855";
-
     setTimeout(()=>{
       btn.innerHTML = original;
       btn.style.background = "#25d366";
     }, 2000);
   });
 }
+
+// Automatski prikaz imena fajla iz foldera images iznad h2
+document.querySelectorAll('.app').forEach(app => {
+  const img = app.querySelector('img');
+  if(img){
+    const fileName = img.src.split('/').pop(); // samo ime fajla
+    const p = document.createElement('p');
+    p.className = 'image-name';
+    p.textContent = fileName;
+    const h2 = app.querySelector('h2');
+    h2.parentNode.insertBefore(p, h2); // ubaci iznad naziva aplikacije
+  }
+});
 </script>
 
 </body>
