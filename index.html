@@ -23,12 +23,32 @@ body{
 header{
   padding:35px 20px 20px;
 }
+
+/* MAIN LOGO */
+.main-logo{
+  font-size:44px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:15px;
+  animation:colorShift 6s infinite alternate;
+}
+.main-logo span{font-weight:700}
+
+/* ANDROID TITLE */
 header h1{
-  font-size:38px;
+  font-size:36px;
   margin-bottom:10px;
+  animation:colorShift 4s infinite alternate;
 }
 header p{
   opacity:.85;
+}
+
+/* COLOR ANIMATION */
+@keyframes colorShift{
+  0%{color:#25d366;text-shadow:0 0 10px #25d366}
+  50%{color:#4da3ff;text-shadow:0 0 10px #4da3ff}
+  100%{color:#ff4d8d;text-shadow:0 0 10px #ff4d8d}
 }
 
 /* CONTAINER */
@@ -51,9 +71,23 @@ header p{
   transform:translateY(-6px);
 }
 
+/* APP LOGO IMAGE */
+.app-logo{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  margin-bottom:15px;
+  animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+  100%{transform:translateY(0)}
+}
+
 /* TITLE */
 .app h2{
-  margin-top:0;
+  margin:10px 0;
 }
 .badge{
   display:inline-block;
@@ -126,6 +160,8 @@ footer{
 <body>
 
 <header>
+  <div class="main-logo">Balkan <span>Media</span></div>
+
   <h1><i class="fab fa-android"></i> Android aplikacije</h1>
   <p>Direktno preuzimanje ili Downloader kod</p>
 </header>
@@ -134,10 +170,13 @@ footer{
 
   <!-- APP 1 -->
   <div class="app">
+    <!-- LOGO APLIKACIJE -->
+    <img src="logo-app1.png" alt="Balkan Media TV" class="app-logo">
+
     <h2>Balkan Media TV <span class="badge">APK</span></h2>
     <p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
 
-    <a class="download" href="https://TVOJ-LINK-OVDE.apk" target="_blank">
+    <a class="download" href="https://TVOJ-LINK.apk" target="_blank">
       <i class="fas fa-download"></i> Direktno preuzimanje
     </a>
 
@@ -149,6 +188,8 @@ footer{
 
   <!-- APP 2 -->
   <div class="app">
+    <img src="logo-app2.png" alt="IPTV Player" class="app-logo">
+
     <h2>IPTV Player <span class="badge">Downloader</span></h2>
     <p>IPTV aplikacija za Android telefone i box uređaje.</p>
 
