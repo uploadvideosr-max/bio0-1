@@ -52,11 +52,11 @@ header p{
 
 /* CONTAINER GRID */
 .container{
-  max-width:1200px;
+  max-width:1400px;
   margin:auto;
   padding:20px;
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
   gap:20px;
 }
 
@@ -77,8 +77,8 @@ header p{
 
 /* APP LOGO IMAGE */
 .app-logo{
-  width:80px;
-  height:80px;
+  width:100px;
+  height:100px;
   object-fit:contain;
   margin-bottom:10px;
   animation:float 3s ease-in-out infinite;
@@ -99,7 +99,7 @@ header p{
 .download{
   display:inline-block;
   margin-top:5px;
-  padding:10px 22px;
+  padding:12px 25px;
   background:#25d366;
   color:#000;
   text-decoration:none;
@@ -118,12 +118,10 @@ header p{
   margin-top:10px;
   background:#111;
   border-radius:12px;
-  padding:10px;
+  padding:12px;
   position:relative;
   font-family:monospace;
   width:100%;
-}
-.code-box span{
   font-size:16px;
   letter-spacing:2px;
 }
@@ -135,7 +133,7 @@ header p{
   top:8px;
   background:#25d366;
   border:none;
-  padding:5px 10px;
+  padding:6px 12px;
   border-radius:8px;
   cursor:pointer;
   font-weight:700;
@@ -156,7 +154,7 @@ footer{
 /* RESPONSIVE */
 @media(max-width:600px){
   .container{
-    grid-template-columns:repeat(auto-fill, minmax(160px,1fr));
+    grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
   }
 }
 </style>
@@ -172,33 +170,125 @@ footer{
 
 <div class="container">
 
-  <!-- APP 1 -->
-  <div class="app">
-    <img src="images/Balkan Media TV.png" alt="Balkan Media TV" class="app-logo">
-    <p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/KqBJaTyO0zJzWFD/download" target="_blank">
-      <i class="fas fa-download"></i> Preuzmi
-    </a>
-    <div class="code-box">
-      <span id="code1">8342292</span>
-      <button class="copy-btn" onclick="copyCode('code1', this)">Kopiraj</button>
-    </div>
-  </div>
+<!-- SVE APLIKACIJE U KVADRATIMA -->
+<div class="app">
+  <img src="images/Balkan Media TV.png" class="app-logo">
+  <p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
+  <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/KqBJaTyO0zJzWFD/download" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code1">8342292</span><button class="copy-btn" onclick="copyCode('code1', this)">Kopiraj</button></div>
+</div>
 
-  <!-- APP 2 -->
-  <div class="app">
-    <img src="images/anesa.png" alt="Anesa" class="app-logo">
-    <p>Android aplikacija za gledanje IPTV sadržaja.</p>
-    <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/agGDWOJ3wjvZiIE/download" target="_blank">
-      <i class="fas fa-download"></i> Preuzmi
-    </a>
-    <div class="code-box">
-      <span id="code2">7529911</span>
-      <button class="copy-btn" onclick="copyCode('code2', this)">Kopiraj</button>
-    </div>
-  </div>
+<div class="app">
+  <img src="images/anesa.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/agGDWOJ3wjvZiIE/download" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code2">7529911</span><button class="copy-btn" onclick="copyCode('code2', this)">Kopiraj</button></div>
+</div>
 
-  <!-- Dodaj ostale aplikacije na isti način -->
+<div class="app">
+  <img src="images/powertv.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/er1SnoobETTOLFw/download" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code3">7291634</span><button class="copy-btn" onclick="copyCode('code3', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/panthertv.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://smart.panthertv.live/PantherTV.apk" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code4">145452</span><button class="copy-btn" onclick="copyCode('code4', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/iboproplayertv.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://smart.panthertv.live/PantherTV.apk" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code5">8532848</span><button class="copy-btn" onclick="copyCode('code5', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/ibopro.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://ibodesk.com/iboprocode.apk" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code6">474637</span><button class="copy-btn" onclick="copyCode('code6', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/iboplayer.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://ibodesk.com/iboupdate.apk" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code7">1171959</span><button class="copy-btn" onclick="copyCode('code7', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/iboplayerpro.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://ibodesk.com/iboplayerpro.apk" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code8">923441</span><button class="copy-btn" onclick="copyCode('code8', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/iboss.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://ibodesk.com/iboss.apk" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code9">967528</span><button class="copy-btn" onclick="copyCode('code9', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/hotplayer.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://apk.hotplayer.app/" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code10">395800</span><button class="copy-btn" onclick="copyCode('code10', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/ibplayerpro.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://iboproapp.com/ibopro.apk" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code11">481220</span><button class="copy-btn" onclick="copyCode('code11', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/iptvextreme.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/XDzNdU9XLgFV2nw/download" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code12">243928</span><button class="copy-btn" onclick="copyCode('code12', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/smartiptv.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://www.megadisk.net/cloud11/index.php/s/Z3wF7twzles0NKa/download" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code13">2877750</span><button class="copy-btn" onclick="copyCode('code13', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/nanomid.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://apk.nanomid.com/" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code14">483149</span><button class="copy-btn" onclick="copyCode('code14', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/trexvip.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://bit.ly/48JC5Ph" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code15">9216452</span><button class="copy-btn" onclick="copyCode('code15', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/trexpro.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://bit.ly/46C1EAC" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code16">2892546</span><button class="copy-btn" onclick="copyCode('code16', this)">Kopiraj</button></div>
+</div>
+
+<div class="app">
+  <img src="images/trexibo.png" class="app-logo">
+  <p>Android aplikacija za gledanje IPTV sadržaja.</p>
+  <a class="download" href="https://bit.ly/4mMhGMM" target="_blank">Preuzmi</a>
+  <div class="code-box"><span id="code17">2599771</span><button class="copy-btn" onclick="copyCode('code17', this)">Kopiraj</button></div>
+</div>
 
 </div>
 
