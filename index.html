@@ -84,17 +84,17 @@ header p{
   100%{transform:translateY(0)}
 }
 
-/* IMAGE NAME */
+/* IMAGE NAME IZMEĐU HEADERA I SLIKE */
 .image-name{
   font-size:16px;
-  margin-bottom:8px;
+  margin-bottom:12px;
   font-weight:600;
   color:#ffd700;
 }
 
 /* TITLE */
 .app h2{
-  margin:10px 0;
+  margin:10px 0 15px;
 }
 
 /* DOWNLOAD BUTTON */
@@ -166,6 +166,8 @@ footer{
 
   <!-- APP 1 -->
   <div class="app">
+    <!-- Ime slike iz foldera images -->
+    <p class="image-name">Balkan Media TV</p>
     <img src="images/Balkan Media TV.png" alt="Balkan Media TV" class="app-logo">
     <h2>Balkan Media TV</h2>
     <p>Android aplikacija za gledanje Balkan Media sadržaja.</p>
@@ -182,6 +184,7 @@ footer{
 
   <!-- APP 2 -->
   <div class="app">
+    <p class="image-name">IPTV Player</p>
     <img src="images/logo-app2.png" alt="IPTV Player" class="app-logo">
     <h2>IPTV Player</h2>
     <p>IPTV aplikacija za Android telefone i box uređaje.</p>
@@ -216,20 +219,6 @@ function copyCode(id, btn){
     }, 2000);
   });
 }
-
-// Prikaz imena slike iz foldera images iznad h2
-document.querySelectorAll('.app').forEach(app => {
-  const img = app.querySelector('img');
-  if(img){
-    let fileName = decodeURIComponent(img.src.split('/').pop()); // uzmi ime fajla
-    fileName = fileName.replace(/\.[^/.]+$/, ""); // ukloni ekstenziju (.png)
-    const p = document.createElement('p');
-    p.className = 'image-name';
-    p.textContent = fileName; // prikazuje npr. "Balkan Media TV"
-    const h2 = app.querySelector('h2');
-    h2.parentNode.insertBefore(p, h2); // ubaci iznad naziva aplikacije
-  }
-});
 </script>
 
 </body>
